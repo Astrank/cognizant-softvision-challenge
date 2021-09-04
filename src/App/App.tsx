@@ -1,8 +1,8 @@
 import React from "react";
-import { CandidateCard } from "../components/CandidateCard";
-import styles from "./App.module.scss";
 
 import logo from "../assets/logo.png";
+
+import styles from "./App.module.scss";
 
 function App() {
   return (

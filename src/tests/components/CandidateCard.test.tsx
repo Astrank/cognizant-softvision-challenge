@@ -33,7 +33,7 @@ describe("CandidateCard", () => {
     });
     
 
-    test("descend button should call descend function with candidate id", () => {
+    test("descend button should call descend function with candidate id", async () => {
         const { getByText } = render(
             <CandidateCard
                 candidate={expectedCandidate}
@@ -44,7 +44,9 @@ describe("CandidateCard", () => {
 
         const descendBtn = getByText("<");
 
-        fireEvent.click(descendBtn);
+        await act(async () => {
+            fireEvent.click(descendBtn);
+        });
 
         expect(expectedDescend).toHaveBeenCalledTimes(1);
         expect(expectedDescend).toHaveBeenCalledWith(expectedCandidate.id);
