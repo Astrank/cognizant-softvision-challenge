@@ -2,11 +2,14 @@ import React from "react";
 import { CandidateCard } from "../../components/CandidateCard";
 import { render, fireEvent, act } from "@testing-library/react";
 import { Candidate } from "../../types/candidate";
+import { useCandidates } from "../../context/CandidateContext";
+
+jest.mock("../../context/CandidateContext");
 
 describe("CandidateCard", () => {
     let expectedCandidate: Candidate,
-        expectedAscend: (id: string) => void,
-        expectedDescend: (id: string) => void;
+        expectedAscend: (id: Candidate["id"]) => void,
+        expectedDescend: (id: Candidate["id"]) => void;
 
     beforeEach(() => {
         expectedCandidate = {
@@ -17,29 +20,25 @@ describe("CandidateCard", () => {
         };
         expectedAscend = jest.fn();
         expectedDescend = jest.fn();
+
+        // useCandidates.mockReturnValues({
+        //     ascendCandidate: expectedAscend,
+        //     descendCandidate: expectedDescend,
+        // });
     });
 
-    test('should render candidate name and comments', () => {
+    test("should render candidate name and comments", () => {
         const { getByText } = render(
-            <CandidateCard
-                candidate={expectedCandidate}
-                ascend={expectedAscend}
-                descend={expectedDescend}
-            />
+            <CandidateCard candidate={expectedCandidate} />
         );
 
         getByText(expectedCandidate.name);
         getByText(expectedCandidate.comments);
     });
-    
 
     test("descend button should call descend function with candidate id", async () => {
         const { getByText } = render(
-            <CandidateCard
-                candidate={expectedCandidate}
-                ascend={expectedAscend}
-                descend={expectedDescend}
-            />
+            <CandidateCard candidate={expectedCandidate} />
         );
 
         const descendBtn = getByText("<");
@@ -54,11 +53,7 @@ describe("CandidateCard", () => {
 
     test("ascend button should call ascend function with candidate id", async () => {
         const { getByText } = render(
-            <CandidateCard
-                candidate={expectedCandidate}
-                ascend={expectedAscend}
-                descend={expectedDescend}
-            />
+            <CandidateCard candidate={expectedCandidate} />
         );
 
         const ascendBtn = getByText(">");

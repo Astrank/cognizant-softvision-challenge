@@ -1,11 +1,20 @@
-[{
-  "id": "goncy",
-  "name": "Gonzalo Pozzo",
-  "step": "Entrevista técnica",
-  "comments": "Medio pelo"
-}, {
-  "id": "doe",
-  "name": "John Doe",
-  "step": "Entrevista inicial",
-  "comments": ""
-}]
+[
+    {
+        "id": "goncy8",
+        "name": "Gonzalo Pozzo",
+        "step": "Entrevista técnica",
+        "comments": "Medio pelo"
+    },
+    {
+        "id": "pozzo7",
+        "name": "Gonzalo Pozzo",
+        "step": "Entrevista técnica",
+        "comments": "Medio pelo"
+    },
+    {
+        "id": "doe6",
+        "name": "John Doe",
+        "step": "Entrevista inicial",
+        "comments": ""
+    }
+]

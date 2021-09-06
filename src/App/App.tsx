@@ -1,16 +1,27 @@
 import React from "react";
+import styles from "./App.module.scss";
+import { useCandidates } from "../context/CandidateContext";
+import { AccordionMenu } from "../components/AccordionMenu";
+import { CandidateProvider } from "../context/CandidateContext";
 
 import logo from "../assets/logo.png";
 
-import styles from "./App.module.scss";
-
 function App() {
-  return (
-    <main>
-      <img alt="Softvision" src={logo} width={320} />
-      <h1 className={styles.title}>Lets get this party started</h1>
-    </main>
-  );
+    return (
+        <main className={styles.container}>
+            <img
+                alt="Softvision"
+                src={logo}
+                width={320}
+                className={styles.logo}
+            />
+            <div className={styles.accordion__container}>
+                <CandidateProvider>
+                    <AccordionMenu />
+                </CandidateProvider>
+            </div>
+        </main>
+    );
 }
 
 export default App;

@@ -1,0 +1,174 @@
+.accordion__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: end;
+    width: 100%;
+    max-width: 30rem;
+    margin: auto;
+}
+
+.btn__add {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem;
+}
+
+.accordion {
+    width: 100%;
+    margin: auto;
+    background-color: rgb(219, 219, 219);
+    border-radius: 6px;
+}
+
+.accordion__item {
+    overflow: hidden;
+    margin-top: 1px;
+}
+
+.accordion__item:first-child {
+    margin-top: 0px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.accordion__item:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.accordion__trigger {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+}
+ 
+.candidate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 5rem;
+    padding: 0 0.5rem;
+    color: #fff;
+    margin-top: 1px;
+    background-color: #222;
+    gap: 0.5rem;
+}
+
+.candidate:hover {
+    background-color: #272727;
+}
+
+.candidate__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.candidate__name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.candidate__comments {
+    color: rgb(141, 140, 140);
+}
+
+.candidate:hover .candidate__buttons {
+    visibility: visible;
+}
+
+.candidate__buttons {
+    display: flex;
+    gap: 0.3rem;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.btn {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 0.2rem;
+}
+
+.overlay {
+    background-color: black;
+    position: fixed;
+    inset: 0;
+    opacity: 0.7;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #fff;
+    padding: 1.8rem;
+    border-radius: 6px;
+    min-width: 400px;
+    position: fixed;
+}
+
+.form__title {
+    font-size: 2rem;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form__input__name{
+    min-height: 2rem;
+}
+
+.form__input__comments {
+    min-height: 4rem;
+}
+
+.form__close {
+    margin-left: auto;
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.form__submit {
+    border-radius: 6px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    border: 2px solid #222;
+    cursor: pointer;
+}
+
+.form__cancel {
+    background-color: #fff;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    border: 2px solid #222;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+
+}
