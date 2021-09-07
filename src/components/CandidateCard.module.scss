@@ -34,10 +34,16 @@
     background-color: #272727;
 }
 
+@media(hover: hover) {
+    .edit__buttons {
+        visibility: hidden;
+    }
 
-.candidate:hover .edit__buttons {
-    visibility: visible;
+    .candidate:hover .edit__buttons {
+        visibility: visible;
+    }
 }
+
 
 .btn {
     display: flex;
@@ -67,10 +73,5 @@
     margin-left: auto;
     display: flex;
     justify-self: center;
-    visibility: hidden;
     margin-left: auto;
-}
-
-@media screen and (min-width: 1024px) {
-
 }
