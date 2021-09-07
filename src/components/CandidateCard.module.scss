@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     min-height: 5rem;
-    padding: 0 0.5rem;
+    padding: 0.5rem;
     color: #fff;
     margin-top: 1px;
     background-color: #222;
@@ -17,13 +17,16 @@
     }
 
     &__name {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: bold;
         color: #fff;
+        max-width: 300px;
     }
 
     &__comments {
-        color: rgb(141, 140, 140);
+        color: rgb(167, 167, 167);
+        max-width: 300px;
+        white-space:pre-line;
     }
 }
 
@@ -31,7 +34,7 @@
     background-color: #272727;
 }
 
-.candidate:hover .step__buttons,
+
 .candidate:hover .edit__buttons {
     visibility: visible;
 }
@@ -46,20 +49,27 @@
     padding: 0.4rem;
 }
 
+.btn__icon {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
 .step__buttons {
     display: flex;
-    gap: 0.3rem;
     flex-direction: column;
-    visibility: hidden;
+    visibility: visible;
+    gap: 0.2rem;
 }
 
 .edit__buttons {
     margin-left: auto;
     display: flex;
-    gap: 0.5rem;
+    justify-self: center;
     visibility: hidden;
+    margin-left: auto;
 }
-
 
 @media screen and (min-width: 1024px) {
 

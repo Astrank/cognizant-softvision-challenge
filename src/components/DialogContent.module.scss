@@ -6,14 +6,18 @@
 }
 
 .form {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     background-color: #fff;
     padding: 1.8rem;
     border-radius: 6px;
-    min-width: 400px;
-    position: fixed;
+    width: 100%;
+    max-width: 400px;
 
     &__title {
         font-size: 2rem;
@@ -44,7 +48,6 @@
 .btn {
     border: none;
     border-radius: 6px;
-    border: 2px solid #222;
     padding: 0.5rem 0.7rem;
     cursor: pointer;
 
@@ -57,6 +60,7 @@
     &__cancel {
         @extend .btn;
         background-color: #fff;
+        border: 2px solid #222;
         color: #222;
     }
 }

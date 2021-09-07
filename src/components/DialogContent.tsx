@@ -41,7 +41,7 @@ export const DialogContent: React.FC<Props> = ({ title, candidate }) => {
     }
 
     return (
-        <div>
+        <div className={styles.asd}>
             <Dialog.Overlay className={styles.overlay} />
             <Dialog.Content className={styles.form}>
                 <Dialog.Title className={styles.form__title}>

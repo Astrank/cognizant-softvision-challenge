@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+    padding: 0 0.3rem 0.5rem 0.3rem;
     align-items: end;
     width: 100%;
     max-width: 30rem;
@@ -50,4 +51,16 @@
         justify-content: space-between;
         border: none;
     }
+}
+
+.empty {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1px;
+    min-height: 5rem;
+    padding: 0 1rem;
+    color: #fff;
+    gap: 0.5rem;
+    background-color: #222;
 }
