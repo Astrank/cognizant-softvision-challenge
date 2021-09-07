@@ -1,0 +1,62 @@
+.overlay {
+    background-color: black;
+    position: fixed;
+    inset: 0;
+    opacity: 0.7;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #fff;
+    padding: 1.8rem;
+    border-radius: 6px;
+    min-width: 400px;
+    position: fixed;
+}
+
+.form__title {
+    font-size: 2rem;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form__input__name{
+    min-height: 2rem;
+}
+
+.form__input__comments {
+    min-height: 4rem;
+}
+
+.form__close {
+    margin-left: auto;
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.form__submit {
+    border-radius: 6px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    border: 2px solid #222;
+    cursor: pointer;
+}
+
+.form__cancel {
+    background-color: #fff;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    border: 2px solid #222;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+}

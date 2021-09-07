@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import styles from "./AccordionMenu.module.scss";
 import { useCandidates } from "../context/CandidateContext";
-import { CandidateCard } from "../components/CandidateCard";
-import styles from "./Component.module.scss";
+import { CandidateCard } from "./CandidateCard";
 import { DialogContent } from "./DialogContent";
 
 import * as Accordion from "@radix-ui/react-accordion";

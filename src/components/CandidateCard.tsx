@@ -1,6 +1,6 @@
 import React from "react";
 import { Candidate } from "../types/candidate";
-import styles from "./Component.module.scss";
+import styles from "./CandidateCard.module.scss";
 import { ArrowUpIcon, ArrowDownIcon, Pencil1Icon, TrashIcon } from "@radix-ui/react-icons";
 import { useCandidates } from "../context/CandidateContext";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -37,7 +37,7 @@ export const CandidateCard: React.FC<CandidateProps> = ({ candidate }) => {
             </div>
             <div>
             <Dialog.Root>
-                <div>
+                <div className={styles.edit__group}>
                     <Dialog.Trigger className={styles.btn__add}>
                         <Pencil1Icon />
                     </Dialog.Trigger>

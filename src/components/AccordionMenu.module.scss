@@ -1,0 +1,53 @@
+.accordion__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: end;
+    width: 100%;
+    max-width: 30rem;
+    margin: auto;
+}
+
+.btn__add {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem;
+}
+
+.accordion {
+    width: 100%;
+    margin: auto;
+    background-color: rgb(219, 219, 219);
+    border-radius: 6px;
+}
+
+.accordion__item {
+    overflow: hidden;
+    margin-top: 1px;
+}
+
+.accordion__item:first-child {
+    margin-top: 0px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.accordion__item:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.accordion__trigger {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+}

@@ -61,12 +61,21 @@ function useCandidateProvider() {
     ];
 
     useEffect(() => {
-        if (candidates.length == 0) {
-            api.candidates
-                .list()
-                .then((candidates) => setCandidates(candidates));
+        const localCandidates = window.localStorage.getItem("candidates");
+        
+        if(localCandidates) {
+            setCandidates(JSON.parse(localCandidates));
+            return;
         }
+
+        api.candidates
+            .list()
+            .then((candidates) => setCandidates(candidates));
     }, []);
+
+    useEffect(() => {
+        localStorage.setItem("candidates", JSON.stringify(candidates))
+    }, [candidates])
 
     const getCandidatesByStep = (step: Candidate["step"]) => {
         return candidates.filter((candidate) => candidate.step === step);

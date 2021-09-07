@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { useCandidates } from "../context/CandidateContext";
-import styles from "./Component.module.scss";
+import styles from "./DialogContent.module.scss";
 import { Candidate } from "../types/candidate";
 
 interface Props {
