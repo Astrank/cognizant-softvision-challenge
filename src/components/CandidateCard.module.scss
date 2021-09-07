@@ -8,38 +8,32 @@
     margin-top: 1px;
     background-color: #222;
     gap: 0.5rem;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    &__name {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    &__comments {
+        color: rgb(141, 140, 140);
+    }
 }
 
 .candidate:hover {
     background-color: #272727;
 }
 
-.candidate__info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
-}
-
-.candidate__name {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #fff;
-}
-
-.candidate__comments {
-    color: rgb(141, 140, 140);
-}
-
-.candidate:hover .candidate__buttons {
+.candidate:hover .step__buttons,
+.candidate:hover .edit__buttons {
     visibility: visible;
-}
-
-.candidate__buttons {
-    display: flex;
-    gap: 0.3rem;
-    flex-direction: column;
-    visibility: hidden;
 }
 
 .btn {
@@ -49,13 +43,21 @@
     cursor: pointer;
     border: none;
     border-radius: 6px;
-    padding: 0.2rem;
+    padding: 0.4rem;
 }
 
-.edit__group {
+.step__buttons {
+    display: flex;
+    gap: 0.3rem;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.edit__buttons {
     margin-left: auto;
     display: flex;
     gap: 0.5rem;
+    visibility: hidden;
 }
 
 

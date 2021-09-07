@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import * as Dialog from "@radix-ui/react-dialog";
-import { useCandidates } from "../context/CandidateContext";
 import styles from "./DialogContent.module.scss";
+import { useCandidates } from "../context/CandidateContext";
 import { Candidate } from "../types/candidate";
+
+import * as Dialog from "@radix-ui/react-dialog";
 
 interface Props {
     title: string;
@@ -51,7 +52,7 @@ export const DialogContent: React.FC<Props> = ({ title, candidate }) => {
                     <input
                         type="text"
                         id="name"
-                        className={styles.form__input__name}
+                        className={styles.form__group__name}
                         defaultValue={candidate ? candidate.name : ""}
                         onChange={(i) => setName(i.target.value)}
                     />
@@ -61,16 +62,19 @@ export const DialogContent: React.FC<Props> = ({ title, candidate }) => {
                     <input
                         type="text"
                         id="comments"
-                        className={styles.form__input__comments}
+                        className={styles.form__group__comments}
                         defaultValue={candidate ? candidate.comments : ""}
                         onChange={(i) => setComments(i.target.value)}
                     />
                 </div>
-                <div className={styles.form__close}>
-                    <Dialog.Close className={styles.form__cancel}>
+                <div className={styles.form__buttons}>
+                    <Dialog.Close className={styles.btn__cancel}>
                         Cancel
                     </Dialog.Close>
-                    <Dialog.Close className={styles.form__submit} onClick={() => handleSubmit()}>
+                    <Dialog.Close
+                        className={styles.btn__submit}
+                        onClick={() => handleSubmit()}
+                    >
                         Submit
                     </Dialog.Close>
                 </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./AccordionMenu.module.scss";
 import { useCandidates } from "../context/CandidateContext";
 import { CandidateCard } from "./CandidateCard";
-import { DialogContent } from "./DialogContent";
+import { DialogContent } from "./DialogContent";    
 
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDownIcon, PlusIcon } from "@radix-ui/react-icons";
@@ -14,7 +14,7 @@ export const AccordionMenu: React.FC = ({}) => {
     return (
         <div className={styles.accordion__menu}>
             <Dialog.Root>
-                <Dialog.Trigger className={styles.btn__add}>
+                <Dialog.Trigger className={styles.btn}>
                         <PlusIcon aria-hidden />
                 </Dialog.Trigger>
                 <DialogContent title="New candidate" />
